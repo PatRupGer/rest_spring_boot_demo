@@ -1,0 +1,5 @@
+
+CREATE USER 'bkuser'@'%' IDENTIFIED BY 'bkpass';
+GRANT ALL PRIVILEGES ON bk_db.* TO 'bkuser'@'%';
+FLUSH PRIVILEGES;
+SHOW DATABASES;
