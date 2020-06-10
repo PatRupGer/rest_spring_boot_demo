@@ -42,20 +42,29 @@ Verbindungsdetails zur Datenbank finden sich außerdem im Projekt-Verzeichnis un
 ### Funktion
 
 Nach dem Start der Anwendung, kann über `localhost:8080` auf die Funktionen des Service zugegriffen werden.
-Zur Funktion stehen die Anfragen:
+Zur Funktion stehen die Anfragen: 
     
     `/api/exchange-rate/{date}/{baseCurrency}/{targetCurrency}`
+    
+    Beispiel:
+    - date: 2012-12-12
+    - basCurrency: USD
+    - targetCurrency USD
 
 Diese erfragt den Wechselkurs zwischen zwei Währungen und erhält als Ergebniss
+
     - Wechsekurs
     - mittlerer Wchselkurs der letzten 5 Tage
     - gibt an ob der Kurs steigen, fallend, constant, oder undifiniert ist
 
-Außerdem kann über die Anfragen 
+Außerdem können die folgenden Anfragen für Historische Informationen benutz werden.
 
     `/api/exchange-rate/history/daily/{yyyy}/{MM}/{dd}`
     `/api/exchange-rate/history/monthly/{yyyy}/{MM}`
+    
+    Beispiel:
+    - yyyy: 2012
+    - MM: 01
+    - dd: 01
 
-Historische Ionformation erlangt werden.
-
-Für die Umsetzung wird die API von `https://exchangeratesapi.io/` benutzt.
+Für die Umsetzung wird die API von `https://exchangeratesapi.io/` benutzt. Dort lassen sich auch die möglichen Währungen abfragen.
